@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Payment Details — AgenticMyze</title><meta name="description" content="Complete your payment and enroll.">
+<link rel="icon" type="image/png" href="/favicon.png"><link rel="stylesheet" href="/styles.css"></head>
+<body>
+<header class="site-header"><div class="container header-inner">
+<a class="brand" href="/"><img src="/agenticmyze-logo.png" alt="AgenticMyze logo" class="logo"><span>AgenticMyze</span></a>
+<nav class="main-nav" id="mainNav"><a href="/" class="">Home</a><a href="/courses" class="">Courses</a><a href="/course-roadmap" class="">Roadmap</a><a href="/results" class="">Results</a><a href="/pricing" class="">Pricing</a><a href="/privacy-policy" class="">Privacy Policy</a><a href="/contact" class="">Contact</a><a href="/landing" class="">Landing Page</a><a href="/pricing" class="btn btn-primary nav-cta">Apply Now</a></nav>
+<button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+</div></header>
+<main><section class="page-hero"><div class="container"><p class="eyebrow">Secure your seat</p><h1>Complete Your Payment</h1><p class="lead">Your selected package is shown below. Enrollment is confirmed after payment verification.</p><p><a class="btn btn-outline" href="/pricing">← Back to packages</a></p></div></section>
+<section class="section"><div class="container narrow">
+<div id="noPlan" hidden><div class="notice"><h2>Choose a Package First</h2><p>Select a package on the pricing page before continuing to payment.</p><p><a class="btn btn-primary" href="/pricing">View Packages</a></p></div></div>
+<div id="wizard" hidden>
+<div class="plan-summary" id="planSummary"></div>
+<div class="steps"><span class="step active" data-step="1">1 · Your Details</span><span class="step" data-step="2">2 · Payment Method</span><span class="step" data-step="3">3 · Confirm &amp; Submit</span></div>
+<form id="enrollForm" class="form" novalidate>
+<div class="wizard-step active" data-step="1">
+<label>Full Name *<input name="name" required minlength="2" placeholder="Your full name"></label>
+<label>Mobile Number with WhatsApp *<input name="whatsapp" required placeholder="03XX-XXXXXXX or +92..."></label>
+<button class="btn btn-primary" type="button" data-next="2">Continue to Payment Details</button></div>
+<div class="wizard-step" data-step="2">
+<p><strong>Choose a payment method *</strong></p>
+<label class="radio"><input type="radio" name="paymentMethod" value="jazzcash" required> JazzCash</label>
+<label class="radio"><input type="radio" name="paymentMethod" value="easypaisa"> Easypaisa</label>
+<label class="radio"><input type="radio" name="paymentMethod" value="bank"> Bank Transfer</label>
+<div id="payDetails" class="pay-details"></div>
+<p class="muted">Send the exact package amount to the account shown above, then continue to Step 3 with your transaction reference.</p>
+<div class="btn-row"><button class="btn btn-outline" type="button" data-next="1">← Back</button><button class="btn btn-primary" type="button" data-next="3">Continue to Confirmation</button></div></div>
+<div class="wizard-step" data-step="3">
+<label>Transaction Reference / TID *<input name="transactionRef" required minlength="4" placeholder="e.g. JazzCash TID, Easypaisa TRX ID, or bank reference"></label>
+<p class="muted">Paid by screenshot? Send your payment screenshot on WhatsApp to <a href="https://wa.me/923078462895" target="_blank" rel="noopener">03078462895</a> after submitting, mentioning your reference ID.</p>
+<p class="form-msg" id="enrollMsg" role="status"></p>
+<div class="btn-row"><button class="btn btn-outline" type="button" data-next="2">← Back</button><button class="btn btn-primary" type="submit">Submit Enrollment</button></div></div>
+</form>
+<div id="enrollSuccess" class="success-box" hidden></div>
+</div></div></section></main>
+<footer class="site-footer"><div class="container footer-grid">
+<div><img src="/agenticmyze-logo.png" alt="AgenticMyze" class="logo footer-logo"><p>Master AI automation, build real client systems, and get paid. Your complete academy for the AI economy.</p></div>
+<div><h4>Pages</h4><ul><li><a href="/">Home</a></li><li><a href="/courses">Courses</a></li><li><a href="/course-roadmap">60-Day Roadmap</a></li><li><a href="/results">Results</a></li><li><a href="/pricing">Pricing</a></li><li><a href="/contact">Contact</a></li><li><a href="/privacy-policy">Privacy Policy</a></li></ul></div>
+<div><h4>Contact</h4><ul><li><a href="mailto:agenticmyze@gmail.com">agenticmyze@gmail.com</a></li><li><a href="tel:+923078462895">03078462895</a></li><li><a href="https://wa.me/923078462895" target="_blank" rel="noopener">WhatsApp: 03078462895</a></li></ul></div>
+</div><p class="copyright">© 2026 AgenticMyze. All rights reserved.</p></footer>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="/app.js"></script></body></html>
