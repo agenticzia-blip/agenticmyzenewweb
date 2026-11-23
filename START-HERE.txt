@@ -1,0 +1,50 @@
+AGENTICMYZE WEBSITE - HOW TO VIEW IT
+====================================
+
+WHY YOU SAW "This site can't be reached"
+-----------------------------------------
+localhost:3000 is YOUR OWN computer, not a website on the
+internet. It only works while the server is running on
+your computer. If you just open localhost:3000 in Chrome
+without starting the server first, Chrome says
+"refused to connect" - exactly like your screenshot.
+
+THE EASY WAY (Windows, no typing)
+----------------------------------
+1. Unzip agenticmyze-website.zip anywhere (e.g. Desktop)
+2. Double-click  START-WEBSITE.bat
+3. First time only: it installs what it needs (about 1 minute)
+4. Your browser opens at http://localhost:3000 automatically
+5. KEEP THE BLACK WINDOW OPEN while you look at the site.
+   Closing it stops the website - localhost:3000 will
+   refuse to connect again until you run it again.
+
+If it says Node.js is not installed:
+  Go to https://nodejs.org, download the LTS version,
+  install it, then double-click START-WEBSITE.bat again.
+
+THE MANUAL WAY (any computer)
+------------------------------
+1. Unzip the folder
+2. Open a terminal / Command Prompt INSIDE that folder
+3. Run:  npm install     (first time only)
+4. Run:  npm start
+5. Open http://localhost:3000 in your browser
+6. Keep that terminal window open while viewing the site.
+
+TROUBLESHOOTING
+---------------
+- "localhost refused to connect" = the server is not
+  running. Run START-WEBSITE.bat / npm start again.
+- Port 3000 already in use? Run:  PORT=3001 npm start
+  then open http://localhost:3001
+- The site only runs on the computer where you started
+  it. To share it with others, deploy it (see README.md
+  for Vercel - push to GitHub, import, Framework: Other,
+  no build command, set ADMIN_TOKEN).
+
+BEFORE GOING LIVE
+-----------------
+Replace the placeholder JazzCash / Easypaisa / bank
+details in public/app.js and config.js with your real
+ones, and change ADMIN_TOKEN from agenticmyze-admin.

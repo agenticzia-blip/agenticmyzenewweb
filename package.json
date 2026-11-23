@@ -1,0 +1,15 @@
+{
+  "name": "agenticmyze-website",
+  "version": "1.0.0",
+  "description": "AgenticMyze website with real Express backend \u2014 courses, 60-day roadmap, pricing, enrollment and admin.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
