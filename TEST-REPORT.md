@@ -76,3 +76,11 @@ After the POSTs, `data/db.json` contained exactly 1 lead, 1 contact, and 1 enrol
 ## Test server
 
 Killed after testing. No test server left running.
+
+## Dark redesign 2026-11-24
+The user reported the rebuild was WHITE while the original site is BLACK. Visual design rebuilt only — no content, pricing, routes, or backend changes.
+- Rewrote `public/styles.css` completely: near-black background #050505, off-white text #f5f5f5, muted grey #9a9a9a/#a1a1aa, dark cards #111/#161616/#181818 with 1px #222/#262626 borders, rounded 12–16px. No white cards anywhere; the only `background:#fff` left is for white pill buttons, badges, active tabs/steps and the toast.
+- Buttons site-wide: primary = white pill, black text; secondary = transparent with #333 border, white text. Blue #2a82c4 kept only for tiny accents (active nav underline, focus outline).
+- Added Playfair Display italic (Google Fonts, Georgia fallback) to all 17 pages; 50 `<em class="serif">` accents, e.g. hero "Automate Businesses.", "AI Automation?", "Pricing.", "Closing Clients", "Questions", "Start?" and equivalents on every other page.
+- Hero centred on home + landing, with bordered pill badge "Up to 2 Clients in 60 Days ⚡", centred subtext, centred pill buttons, and the caps line "PACKAGE-SPECIFIC 60-DAY CLIENT OUTCOMES". Header black with white "Apply Now" pill. Featured Growth Catalyst card is #181818 with white "Choose Growth Catalyst" button; other price buttons are dark outline. Forms, payment boxes, success box, admin tables all dark.
+- Re-test 2026-11-24 (PORT=3100, Node): routes 23/23 — 22×200 (all pages incl. all 4 payment variants, /admin, /api/health, /api/plans, /styles.css, /app.js) and 404 only on /nonexistent-page. POST /api/enrollments valid (elite/JazzCash) returned 200 with reference AMZ-PZ9LZJ. `node --check server.js` clean. Test server killed. Test record removed: data/db.json reset to empty arrays, data/submissions.log deleted.
