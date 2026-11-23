@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Admin Dashboard — AgenticMyze</title><meta name="description" content="Admin dashboard for leads and enrollments.">
-<link rel="icon" type="image/png" href="/favicon.png"><link rel="stylesheet" href="/styles.css"></head>
+<link rel="icon" type="image/png" href="/favicon.png"><link rel="stylesheet" href="/styles.css"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@1,400;1,500;1,600&display=swap" rel="stylesheet"></head>
 <body>
 <header class="site-header"><div class="container header-inner">
 <a class="brand" href="/"><img src="/agenticmyze-logo.png" alt="AgenticMyze logo" class="logo"><span>AgenticMyze</span></a>
 <nav class="main-nav" id="mainNav"><a href="/" class="">Home</a><a href="/courses" class="">Courses</a><a href="/course-roadmap" class="">Roadmap</a><a href="/results" class="">Results</a><a href="/pricing" class="">Pricing</a><a href="/privacy-policy" class="">Privacy Policy</a><a href="/contact" class="">Contact</a><a href="/landing" class="">Landing Page</a><a href="/pricing" class="btn btn-primary nav-cta">Apply Now</a></nav>
 <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
 </div></header>
-<main><section class="page-hero"><div class="container"><p class="eyebrow">AgenticMyze</p><h1>Admin Dashboard</h1><p class="lead">Leads, enrollments, and contact messages. Sign in with your admin token to view records.</p></div></section>
+<main><section class="page-hero"><div class="container"><p class="eyebrow">AgenticMyze</p><h1>Admin <em class="serif">Dashboard</em></h1><p class="lead">Leads, enrollments, and contact messages. Sign in with your admin token to view records.</p></div></section>
 <section class="section"><div class="container">
 <form id="adminLogin" class="form inline-form"><label>Admin Token<input type="password" id="adminToken" placeholder="Enter admin token" autocomplete="off"></label><button class="btn btn-primary" type="submit">Load Dashboard</button></form>
 <p class="muted">Default token is <code>agenticmyze-admin</code> — change it in <code>.env</code> (ADMIN_TOKEN) before going live. The token is sent only to this site&rsquo;s own API.</p>
 <p class="form-msg" id="adminMsg" role="status"></p>
 <div id="adminData" hidden>
 <div class="btn-row"><button class="btn btn-outline" type="button" id="refreshBtn">Refresh</button><a class="btn btn-outline" href="/api/admin/export.csv" id="csvLink" target="_blank" rel="noopener">Download Enrollments CSV</a></div>
-<h2>Enrollments</h2><div class="table-wrap"><table id="enrollTable"><thead><tr><th>Reference</th><th>Name</th><th>WhatsApp</th><th>Plan</th><th>Method</th><th>Txn Ref</th><th>Status</th><th>Date</th><th>Action</th></tr></thead><tbody></tbody></table></div>
-<h2>Leads</h2><div class="table-wrap"><table id="leadTable"><thead><tr><th>Name</th><th>WhatsApp</th><th>Plan / Interest</th><th>Source</th><th>Status</th><th>Date</th><th>Action</th></tr></thead><tbody></tbody></table></div>
-<h2>Contact Messages</h2><div class="table-wrap"><table id="contactTable"><thead><tr><th>Name</th><th>WhatsApp</th><th>Email</th><th>Plan</th><th>Message</th><th>Status</th><th>Date</th><th>Action</th></tr></thead><tbody></tbody></table></div>
+<h2><em class="serif">Enrollments</em></h2><div class="table-wrap"><table id="enrollTable"><thead><tr><th>Reference</th><th>Name</th><th>WhatsApp</th><th>Plan</th><th>Method</th><th>Txn Ref</th><th>Status</th><th>Date</th><th>Action</th></tr></thead><tbody></tbody></table></div>
+<h2><em class="serif">Leads</em></h2><div class="table-wrap"><table id="leadTable"><thead><tr><th>Name</th><th>WhatsApp</th><th>Plan / Interest</th><th>Source</th><th>Status</th><th>Date</th><th>Action</th></tr></thead><tbody></tbody></table></div>
+<h2>Contact <em class="serif">Messages</em></h2><div class="table-wrap"><table id="contactTable"><thead><tr><th>Name</th><th>WhatsApp</th><th>Email</th><th>Plan</th><th>Message</th><th>Status</th><th>Date</th><th>Action</th></tr></thead><tbody></tbody></table></div>
 </div></div></section></main>
 <footer class="site-footer"><div class="container footer-grid">
 <div><img src="/agenticmyze-logo.png" alt="AgenticMyze" class="logo footer-logo"><p>Master AI automation, build real client systems, and get paid. Your complete academy for the AI economy.</p></div>
